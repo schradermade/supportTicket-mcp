@@ -2,16 +2,21 @@
   "name": "supporttickets-mcp",
   "version": "1.0.0",
   "description": "",
-  "main": "index.ts",
+  "main": "server.ts",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc && chmod 755 build/server.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "@modelcontextprotocol/sdk": "^1.8.0",
     "@types/express": "^5.0.1",
     "@types/node": "^22.13.17",
+    "dotenv": "^16.4.7",
     "express": "^5.1.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.2"
