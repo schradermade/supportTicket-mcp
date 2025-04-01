@@ -1,12 +1,15 @@
 {
   "compilerOptions": {
-    "target": "ES6",
-    "module": "CommonJS",
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "outDir": "./dist"
+    "module": "ESNext", // Use ES modules (or "ES6")
+    "target": "ESNext", // Or "ES6" if you want to target a lower version
+    "moduleResolution": "node", // Use Node-style module resolution
+    "esModuleInterop": true, // Ensure compatibility with CommonJS
+    "skipLibCheck": true, // Skip checking of declaration files
+    "strict": true, // Optional, but recommended for type safety
+    "outDir": "./dist", // Output directory for compiled files
+    "baseUrl": ".", // Set baseUrl for module resolution
+    "resolveJsonModule": true // Allow importing JSON files
   },
-  "include": ["server.ts"]
+  "include": ["src/**/*.ts"], // Include all .ts files under src/
+  "exclude": ["node_modules"] // Exclude node_modules
 }
